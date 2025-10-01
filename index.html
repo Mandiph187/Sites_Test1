@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Site Navigator</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0d6efd"/>
+  <style>
+    :root{--bg:#0b0d12;--card:#141824;--muted:#9aa4b2;--acc:#0d6efd}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:var(--bg);color:#e6e9ef}
+    header{position:sticky;top:0;background:linear-gradient(180deg,#0d6efd 0%, #0d6efd 50%, transparent 100%);padding:16px 16px 24px}
+    h1{margin:0;font-size:20px}
+    .container{padding:12px}
+    .search{display:flex;gap:8px;margin-top:12px}
+    input[type="search"]{flex:1;padding:14px 14px;border-radius:12px;border:1px solid #2a3244;background:#0e1320;color:#e6e9ef;font-size:16px}
+    .list{margin-top:12px;display:grid;gap:10px}
+    .card{background:var(--card);border:1px solid #222a3a;border-radius:14px;padding:12px}
+    .name{font-weight:600}
+    .coords{color:var(--muted);font-size:12px;margin-top:4px}
+    .actions{margin-top:10px;display:flex;gap:8px}
+    button, a.btn{appearance:none;border:0;border-radius:10px;background:var(--acc);color:white;padding:10px 12px;font-weight:600;text-decoration:none}
+    .small{font-size:12px;background:#2a3244}
+    .footer{color:#738197;text-align:center;padding:18px 0;font-size:12px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Site Navigator</h1>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search site name…" autocomplete="off" autofocus />
+    </div>
+  </header>
+  <div class="container">
+    <div id="count" class="small"></div>
+    <div id="list" class="list"></div>
+    <div class="footer">Install to Home Screen for app-like experience.</div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
